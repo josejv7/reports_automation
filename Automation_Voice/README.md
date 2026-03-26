@@ -16,13 +16,11 @@ para su visualización en Power BI
 Automation_voice/
 ├── images
 │   └── dashboard.png
-├── Voice
-
+├── .env.example
+├── .gitignore
 ├── README.md
 ├── requirements.txt
-├── images/
-│   └── dashboard.png
-├── Voice.py
+├── voice-2.0.py
 ```
 ## 🚀 Instalación
 

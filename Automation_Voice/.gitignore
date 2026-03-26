@@ -20,3 +20,6 @@ __pycache__/
 # Windows
 Thumbs.db
 desktop.ini
+
+# Scripts que aún no están listos
+Reporting_Automations/

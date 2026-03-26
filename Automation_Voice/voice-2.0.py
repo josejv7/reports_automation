@@ -1,7 +1,7 @@
 """
 ETL Script - BPO Voice Report Automation
 
-Procesa archivos crudos .csv descargados desde las plataformas Five9. Realiza limpieza, transformación y 
+Procesa archivos crudos .csv descargados desde la plataforma Five9. Realiza limpieza, transformación y 
 generación de un nuevo archivo .csv el cual aliemnta un dashboard en Power BI.
 
 Author: Jose Joaquin Velasco
