@@ -6,7 +6,6 @@
 *.xlsx
 
 # Imágenes de muestra que no sean el dashboard
-# (el dashboard sí se sube porque está en /images)
 
 # Entorno virtual
 automation/
