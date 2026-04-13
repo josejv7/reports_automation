@@ -2,7 +2,7 @@
 ETL Script - BPO Voice Report Automation
 
 Procesa archivos crudos .csv descargados desde la plataforma Five9. Realiza limpieza, transformación y 
-generación de un nuevo archivo .csv el cual aliemnta un dashboard en Power BI.
+generación de un nuevo archivo .csv el cual alimenta un dashboard en Power BI.
 
 Author: Jose Joaquin Velasco
 Versión: 2.0
@@ -72,7 +72,7 @@ logger.info("Cargando roster...")
 
 df_roster = pd.read_excel(ruta_roster, sheet_name="Roster")
 df_roster["User2"] = df_roster["User2"].str.lower()
-df_roster["Email BpoLabs"] = df_roster["Email BpoLabs"].str.lower()
+df_roster["Email Bpo"] = df_roster["Email Bpo"].str.lower()
 df_roster["Recycled Email LBT"] = df_roster["Recycled Email LBT"].str.lower()
 df_roster["Recycled Email LPW"] = df_roster["Recycled Email LPW"].str.lower()
 
@@ -83,27 +83,27 @@ logger.info("Roster cargado correctamente.")
 # ------------------------------------------------------
 
 dic_supervisor_1 = df_roster.set_index("User2")["Direct Report"].to_dict()
-dic_supervisor_2 = df_roster.set_index("Email BpoLabs")["Direct Report"].to_dict()
+dic_supervisor_2 = df_roster.set_index("Email Bpo")["Direct Report"].to_dict()
 dic_supervisor_3 = df_roster.set_index("Recycled Email LBT")["Direct Report"].to_dict()
 dic_supervisor_4 = df_roster.set_index("Recycled Email LPW")["Direct Report"].to_dict()
 
 dic_username_1 = df_roster.set_index("User2")["Name Five9"].to_dict()
-dic_username_2 = df_roster.set_index("Email BpoLabs")["Name Five9"].to_dict()
+dic_username_2 = df_roster.set_index("Email Bpo")["Name Five9"].to_dict()
 dic_username_3 = df_roster.set_index("User2")["Name Five9"].to_dict()
 dic_username_4 = df_roster.set_index("User2")["Name Five9"].to_dict()
 
 dic_status_1 = df_roster.set_index("User2")["Status"].to_dict()
-dic_status_2 = df_roster.set_index("Email BpoLabs")["Status"].to_dict()
+dic_status_2 = df_roster.set_index("Email Bpo")["Status"].to_dict()
 dic_status_3 = df_roster.set_index("Recycled Email LBT")["Status"].to_dict()
 dic_status_4 = df_roster.set_index("Recycled Email LPW")["Status"].to_dict()
 
 dic_lob_1 = df_roster.set_index("User2")["Division"].to_dict()
-dic_lob_2 = df_roster.set_index("Email BpoLabs")["Division"].to_dict()
+dic_lob_2 = df_roster.set_index("Email Bpo")["Division"].to_dict()
 dic_lob_3 = df_roster.set_index("Recycled Email LBT")["Division"].to_dict()
 dic_lob_4 = df_roster.set_index("Recycled Email LPW")["Division"].to_dict()
 
 dic_wave_1 = df_roster.set_index("User2")["Wave"].to_dict()
-dic_wave_2 = df_roster.set_index("Email BpoLabs")["Wave"].to_dict()
+dic_wave_2 = df_roster.set_index("Email Bpo")["Wave"].to_dict()
 dic_wave_3 = df_roster.set_index("Recycled Email LBT")["Wave"].to_dict()
 dic_wave_4 = df_roster.set_index("Recycled Email LPW")["Wave"].to_dict()
 
